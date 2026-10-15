@@ -274,6 +274,14 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 /* ==========================================================================
    Faixa de oferta (topo)
    ========================================================================== */
+
+.retafinal-tag{
+  position:relative;z-index:31;text-align:center;
+  background:#000;color:#fff;
+  font-family:var(--display);font-weight:900;font-size:clamp(.72rem,2.6vw,.92rem);
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:.55rem 1rem;
+}
 .offerbar{
   position:relative;z-index:30;display:flex;align-items:center;justify-content:center;gap:.65rem;
   padding:.72rem var(--gutter);text-align:center;color:#fff;
@@ -1281,6 +1289,59 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 @media (min-width:1040px){.stage__arrow--prev{left:-24px}.stage__arrow--next{right:-24px}}
 .stage__dots{display:flex;justify-content:center;gap:.45rem;margin-top:1.1rem}
 
+
+/* ---------- Oferta (redesenhada) ---------- */
+#oferta .offer{
+  position:relative;max-width:680px;margin-inline:auto;
+  background:linear-gradient(175deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+  border:1px solid rgba(217,164,65,.35);border-radius:var(--r-xl);
+  box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 1px rgba(217,164,65,.08) inset;
+  overflow:hidden;
+}
+#oferta .offer__glow{
+  position:absolute;inset:-40% -20% auto -20%;height:60%;pointer-events:none;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(217,164,65,.28),transparent 70%);
+}
+#oferta .offer__top{
+  position:relative;background:linear-gradient(140deg,var(--navy-900),var(--navy-700));
+  color:#fff;padding:clamp(1.8rem,4.5vw,2.5rem) clamp(1.6rem,4vw,2.25rem) clamp(1.4rem,3vw,1.8rem);
+  text-align:center;border-bottom:1px solid rgba(217,164,65,.3);
+}
+#oferta .offer__kicker{
+  font-family:var(--display);font-weight:800;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;
+}
+#oferta .offer__name{
+  font-family:var(--display);font-weight:900;font-size:clamp(1.4rem,3.6vw,1.95rem);
+  text-transform:uppercase;letter-spacing:-.02em;line-height:1.1;
+}
+#oferta .offer__body{position:relative;padding:clamp(1.7rem,4.5vw,2.5rem)}
+#oferta .offer__features{display:grid;grid-template-columns:1fr;gap:.9rem;margin-bottom:1.9rem}
+#oferta .offer__feat{display:flex;align-items:flex-start;gap:.85rem;font-size:.97rem;line-height:1.4;color:#fff}
+#oferta .offer__feat strong{color:var(--gold)}
+#oferta .offer__feat-ic{
+  flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#1a1206;box-shadow:0 6px 16px rgba(0,0,0,.35);margin-top:.05rem;
+}
+#oferta .offer__price-box{
+  text-align:center;padding:1.5rem 0 1.7rem;margin-bottom:1.7rem;
+  border-top:1px dashed rgba(255,255,255,.2);border-bottom:1px dashed rgba(255,255,255,.2);
+}
+#oferta .offer__price{
+  font-family:var(--display);font-weight:900;letter-spacing:-.04em;color:#fff;
+  font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;
+}
+#oferta .offer__price-note{color:rgba(255,255,255,.72);font-size:.9rem;margin-top:.55rem}
+#oferta .offer__cta{width:100%;justify-content:center;text-align:center}
+#oferta .offer__trust{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem 1.6rem;list-style:none;
+  padding:0;margin:1.5rem 0 0;
+}
+#oferta .offer__trust li{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.82);font-size:.82rem;font-weight:700}
+#oferta .offer__trust svg{flex:none;color:var(--gold)}
+@media (min-width:640px){
+  #oferta .offer__features{grid-template-columns:1fr 1fr}
+}
 /* ---------- Faixas em loop (mapas e depoimentos) ---------- */
 .marquee{
   position:relative;overflow:hidden;
@@ -1497,6 +1558,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 </style></head>
 <body>
 <a class="skip" href="#hero">Ir para o conteúdo</a>
+<div class="retafinal-tag" role="note">REVISÃO DE RETA FINAL</div>
 <div aria-label="Oferta especial" class="offerbar" id="offerbar" role="region">
 <span aria-hidden="true" class="offerbar__dot"></span>
 <p class="offerbar__t"><span class="offerbar__txt">REVISÃO VISUAL PARA O SES-TO 2026 — ENFERMEIRO</span> <span class="offerbar__date" id="offerDate"></span></p>
@@ -1689,7 +1751,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 </div>
 </section><section class="section section--bonus">
 <div class="wrap"><div class="head" data-reveal=""><p class="eyebrow">Como usar o material</p><h2>Abra o mapa, revise os pontos e volte às questões</h2><p class="lede" style="margin-top:1rem">Use os mapas como apoio em revisões curtas, para retomar assuntos estudados ou organizar os pontos que precisam de outra leitura.</p></div><div class="bonus"><article class="bcard" data-reveal=""><span class="bcard__tag">01</span><h3>Antes das questões</h3><p>Revise o mapa do assunto para relembrar conceitos e relações importantes.</p></article><article class="bcard" data-reveal=""><span class="bcard__tag">02</span><h3>Depois de errar</h3><p>Volte ao tema relacionado à questão e identifique o ponto que precisa reforçar.</p></article><article class="bcard" data-reveal=""><span class="bcard__tag">03</span><h3>Nas revisões finais</h3><p>Use os mapas para retomar os assuntos sem deixar de consultar fontes oficiais quando necessário.</p></article></div></div>
-</section><section class="section section--gray" id="oferta"><div class="wrap"><div class="head" data-reveal=""><p class="eyebrow">Oferta</p><h2>Garanta os 100 mapas mentais do SES-TO 2026</h2><p class="lede" style="margin-top:1rem">Pagamento único, acesso digital, pronto para você revisar hoje mesmo o conteúdo do concurso SES-TO 2026 — Enfermeiro.</p></div><article class="offer" data-reveal=""><div class="offer__top"><p class="offer__kicker">SES-TO 2026 • ENFERMEIRO</p><p class="offer__name">100 Mapas Mentais Ilustrados</p></div><div class="offer__body"><ul class="incl"><li><span>100 mapas organizados em 10 módulos didáticos, do início ao fim do edital</span></li><li><span>Cobre conhecimentos específicos de Enfermagem e conhecimentos gerais previstos no edital</span></li><li><span>Formato horizontal, com uma página independente por mapa — fácil de abrir no celular</span></li><li><span>PDF liberado para download assim que o pagamento for confirmado</span></li></ul><p class="offer__price">R$ 19,90</p><p class="offer__delivery">Pagamento único • Material digital em PDF</p><a class="btn btn--primary btn--xl offer__cta" href="https://pay.lowify.com.br/checkout?product_id=OdOjEM">QUERO GARANTIR MEU ACESSO — R$ 19,90</a></div></article></div></section><section class="section section--white"><div class="wrap"><div class="head" data-reveal=""><h2>Um apoio visual para sua preparação</h2><p class="lede" style="margin-top:1rem">Os mapas são um recurso complementar. O edital consolidado, suas retificações, os comunicados oficiais e a resolução de questões continuam sendo referências importantes.</p></div></div></section><section class="section section--gray" id="faq">
+</section><section class="section section--dark" id="oferta"><div class="wrap"><div class="head" data-reveal=""><p class="eyebrow">Oferta especial</p><h2>Garanta os 100 mapas mentais <span class="section-highlight">antes da prova</span></h2><p class="lede" style="margin-top:1rem">Pagamento único, acesso digital, pronto para você revisar hoje mesmo o conteúdo do concurso SES-TO 2026 — Enfermeiro.</p></div><article class="offer offer--premium" data-reveal=""><div class="offer__glow" aria-hidden="true"></div><div class="offer__top"><p class="offer__kicker">SES-TO 2026 • ENFERMEIRO</p><p class="offer__name">100 Mapas Mentais Ilustrados</p></div><div class="offer__body"><div class="offer__features"><div class="offer__feat"><span class="offer__feat-ic" style="background:var(--gold)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="16"><path d="M4 12.5l5 5L20 6.5"></path></svg></span><span>100 mapas organizados em <strong>10 módulos</strong> didáticos, do início ao fim do edital</span></div><div class="offer__feat"><span class="offer__feat-ic" style="background:#1E9C8F"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="16"><path d="M4 12.5l5 5L20 6.5"></path></svg></span><span>Cobre <strong>conhecimentos específicos</strong> de Enfermagem e conhecimentos gerais previstos no edital</span></div><div class="offer__feat"><span class="offer__feat-ic" style="background:#1E9C8F"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="16"><path d="M4 12.5l5 5L20 6.5"></path></svg></span><span>Formato horizontal, com uma <strong>página independente por mapa</strong> — fácil de abrir no celular</span></div><div class="offer__feat"><span class="offer__feat-ic" style="background:var(--gold)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="16"><path d="M4 12.5l5 5L20 6.5"></path></svg></span><span>PDF liberado para download <strong>assim que o pagamento for confirmado</strong></span></div></div><div class="offer__price-box"><p class="offer__price">R$ 19,90</p><p class="offer__price-note">Pagamento único · menos de R$ 0,20 por mapa</p></div><a class="btn btn--primary btn--xl btn-pulse offer__cta" href="https://pay.lowify.com.br/checkout?product_id=OdOjEM">QUERO GARANTIR MEU ACESSO — R$ 19,90</a><ul aria-label="Garantias da compra" class="offer__trust"><li><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="22"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span>Compra segura</span></li><li><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="22"><rect height="11" rx="2" width="16" x="4" y="10"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg><span>Privacidade protegida</span></li><li><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="22"><path d="M4 4v16l4-3 4 3 4-3 4 3V4z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Acesso imediato em PDF</span></li></ul></div></article></div></section><section class="section section--white"><div class="wrap"><div class="head" data-reveal=""><h2>Um apoio visual para sua preparação</h2><p class="lede" style="margin-top:1rem">Os mapas são um recurso complementar. O edital consolidado, suas retificações, os comunicados oficiais e a resolução de questões continuam sendo referências importantes.</p></div></div></section><section class="section section--gray" id="faq">
 <div class="wrap">
 <div class="head center" data-reveal="" style="margin-inline:auto">
 <p class="eyebrow" style="justify-content:center">Dúvidas frequentes</p>
