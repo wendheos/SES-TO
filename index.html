@@ -320,6 +320,15 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 .hero__top{display:flex;flex-direction:column;align-items:center;gap:var(--hs-2)}
 .hero__logo{width:min(220px,58vw);height:auto;display:block}
 
+
+.bonus-teaser{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.32rem 1rem;border-radius:999px;
+  background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.45);
+  color:var(--gold);font-family:var(--display);font-weight:700;
+  font-size:clamp(.68rem,2.8vw,.8rem);letter-spacing:.02em;text-transform:uppercase;
+}
+.bonus-teaser svg{flex:none}
 .seal{
   display:flex;align-items:center;gap:.7rem;
   padding:.32rem 1rem .32rem .38rem;border-radius:999px;
@@ -1623,6 +1632,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 <span class="seal__t" id="sealText"></span>
 </span>
 </div>
+<div class="bonus-teaser" data-reveal=""><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24" width="15"><path d="M20 12v9H4v-9"></path><path d="M2 7h20v5H2z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"></path></svg><span>Ao comprar, você também ganha bônus extras</span></div>
 </div>
 <h1 data-reveal="" style="--d:.08s">+170 MAPAS VISUAIS<br>PARA <span class="hero-highlight">SES-TO 2026</span><br>ENFERMEIRO</h1>
 <p class="hero__lead" data-reveal="" style="--d:.11s">Chega de se perder em PDFs de dezenas de páginas por assunto. Cada mapa resume um tema do edital de Enfermagem em uma página ilustrada — fácil de revisar entre um plantão e outro.</p>
