@@ -1926,6 +1926,13 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 }
 #contagem-prova .lede{max-width:42ch;margin-bottom:1.7rem!important;font-size:1rem}
 #contagem-prova .btn{white-space:nowrap}
+@media (max-width:480px){
+  #contagem-prova .btn{white-space:normal;max-width:100%;text-align:center}
+  #contagem-prova .countdown-box{min-width:clamp(58px,19vw,80px);padding:1.1rem .3rem .9rem}
+  #contagem-prova .countdown-box .num{font-size:clamp(1.7rem,8vw,2.6rem)}
+  #contagem-prova .countdown-grid{gap:.3rem}
+}
+
 
 /* Capa: faixa de canais de entrega + selos de confiança abaixo do CTA */
 .delivery-note--channels{
